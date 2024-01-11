@@ -3,18 +3,19 @@ const mongoose = require("mongoose")
 const orderItemSchema = new mongoose.Schema(
     {
         orderID : {
-            type : mongoose.SchemaTypes.ObjectId,
+            type : String,
             required : true,
-            ref : "orderModel"
+            
         },
         productName : {
-            type : Object,
+            type : String,
             required : true
         },
         quantity : {
             type : Number,
         },
-        price : {   e : Number,
+        price : {   
+            type : Number,
         }
     }
 )
