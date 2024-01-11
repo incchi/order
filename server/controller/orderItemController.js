@@ -5,9 +5,8 @@ const orderItemController = {
     getAll: async (req, res) => {
         try {
             const { orderid, productname, quantity, price } = req.body;
-            
             const orderDB = await orderModel.findOne({ orderID: orderid });
-            console.log(orderDB);
+            
             if(orderDB){
                 await orderItemModel.create({
                     orderID: orderid,
